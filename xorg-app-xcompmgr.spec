@@ -4,7 +4,7 @@ Name:		xcompmgr
 Version:	040915
 Release:	1
 License:	MIT
-Group:		X11
+Group:		X11/Applications
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	640b34cfefa8e655743083c3e51c6887
 URL:		http://freedesktop.org/cgi-bin/viewcvs.cgi/xapps/xcompmgr/
@@ -16,6 +16,7 @@ Requires:	X11-libs >= 1:6.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		%{_usr}/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 Composite extension option manager.
