@@ -1,52 +1,48 @@
-
-%define		_pkgname	xcompmgr
-%define		_snap		040304
-
-Summary:	X Composite extension manager
+Summary:	Composite extension option manager
+Summary(pl):	Mened¿er opcji dla rozszrzenia composite
 Name:		xcompmgr
-Version:	%{_snap}
+Version:	040915
 Release:	1
-License:	MIT
-Group:		X11/Applications
-Source0:	http://ep09.pld-linux.org/~adgor/pld/%{_pkgname}-%{_snap}.tar.bz2
-# Source0-md5:	50bfc5758314eb7aea1728d3da2b5d8f
-URL:		http://www.freedesktop.org/Software/xserver
-BuildRequires:	libXcomposite-devel
-BuildRequires:	libXdamage-devel
-BuildRequires:	libXfixes-devel
-BuildRequires:	libXrender-devel
+License:	GPL
+Group:		X11
+Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	640b34cfefa8e655743083c3e51c6887
+URL:		http://freedesktop.org/cgi-bin/viewcvs.cgi/xapps/xcompmgr/
+BuildRequires:	X11-devel >= 1:6.8.0
 BuildRequires:	pkgconfig
-Requires:	libXcomposite
-Requires:	libXdamage
-Requires:	libXfixes
-Requires:	libXrender
+Requires:	X11-libs >= 1:6.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
-
-%define		_noautoreqdep	libX11.so.6 libXrender.so.1
+%define		_prefix		%{_usr}/X11R6
 
 %description
-X Composite extension manager.
+Composite extension option manager.
+
+%description -l pl
+Mened¿er opcji dla rozszrzenia composite.
 
 %prep
-%setup -q -n %{_pkgname}-%{_snap}
+%setup -q -n %{name}
 
 %build
-
-%{__make}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_bindir}
 
-install -d $RPM_BUILD_ROOT/%{_bindir}
-install xcompmgr $RPM_BUILD_ROOT/%{_bindir}
+%{makeinstall}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
-%attr(755,root,root) %{_bindir}/xcompmgr
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*.1*
