@@ -1,13 +1,14 @@
 Summary:	Composite extension option manager
 Summary(pl):	Zarz±dca opcji dla rozszerzenia composite
 Name:		xcompmgr
-Version:	040915
+Version:	1.1
 Release:	1
+Epoch:		1
 License:	MIT
 Group:		X11/Applications
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	640b34cfefa8e655743083c3e51c6887
-URL:		http://freedesktop.org/cgi-bin/viewcvs.cgi/xapps/xcompmgr/
+Source0:	http://freedesktop.org/~xapps/release/%{name}-%{version}.tar.gz
+# Source0-md5:	55f1ae4336464a731306138b5d55c92e
+URL:		http://www.freedesktop.org/Software/xapps
 BuildRequires:	X11-devel >= 1:6.8.0
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -25,7 +26,7 @@ Composite extension option manager.
 Zarz±dca opcji dla rozszerzenia composite.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__aclocal}
