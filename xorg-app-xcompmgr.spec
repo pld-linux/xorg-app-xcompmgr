@@ -1,14 +1,16 @@
 Summary:	Composite extension option manager
-Summary(pl):	Mened¿er opcji dla rozszrzenia composite
+Summary(pl):	Zarz±dca opcji dla rozszerzenia composite
 Name:		xcompmgr
 Version:	040915
 Release:	1
-License:	GPL
+License:	MIT
 Group:		X11
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	640b34cfefa8e655743083c3e51c6887
 URL:		http://freedesktop.org/cgi-bin/viewcvs.cgi/xapps/xcompmgr/
 BuildRequires:	X11-devel >= 1:6.8.0
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	pkgconfig
 Requires:	X11-libs >= 1:6.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Composite extension option manager.
 
 %description -l pl
-Mened¿er opcji dla rozszrzenia composite.
+Zarz±dca opcji dla rozszerzenia composite.
 
 %prep
 %setup -q -n %{name}
@@ -34,13 +36,12 @@ Mened¿er opcji dla rozszrzenia composite.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
 
-%{makeinstall}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %defattr(644,root,root,755)
