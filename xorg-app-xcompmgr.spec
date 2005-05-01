@@ -6,9 +6,9 @@ Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://freedesktop.org/~xapps/release/%{name}-%{version}.tar.bz2
+Source0:	http://freedesktop.org/xapps/release/%{name}-%{version}.tar.bz2
 # Source0-md5:	5c7b7e1c0360fec4b185cf575cf3fa0a
-URL:		http://www.freedesktop.org/Software/xapps
+URL:		http://freedesktop.org/Software/xapps
 BuildRequires:	X11-devel >= 1:6.8.0
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig
 Requires:	X11-libs >= 1:6.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		%{_usr}/X11R6
+%define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
 
 %description
