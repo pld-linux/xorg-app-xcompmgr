@@ -9,15 +9,18 @@ Group:		X11/Applications
 Source0:	http://freedesktop.org/xapps/release/%{name}-%{version}.tar.bz2
 # Source0-md5:	5c7b7e1c0360fec4b185cf575cf3fa0a
 URL:		http://freedesktop.org/Software/xapps
-BuildRequires:	X11-devel >= 1:6.8.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	pkgconfig
-Requires:	X11-libs >= 1:6.8.0
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXcomposite-devel
+BuildRequires:	xorg-lib-libXdamage-devel
+BuildRequires:	xorg-lib-libXrender-devel
+Requires:	xorg-lib-libX11
+Requires:	xorg-lib-libXcomposite
+Requires:	xorg-lib-libXdamage
+Requires:	xorg-lib-libXrender
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Composite extension option manager.
