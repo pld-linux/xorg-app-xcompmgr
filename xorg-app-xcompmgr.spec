@@ -16,10 +16,6 @@ BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
 BuildRequires:	xorg-lib-libXdamage-devel
 BuildRequires:	xorg-lib-libXrender-devel
-Requires:	xorg-lib-libX11
-Requires:	xorg-lib-libXcomposite
-Requires:	xorg-lib-libXdamage
-Requires:	xorg-lib-libXrender
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
