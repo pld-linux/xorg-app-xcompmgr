@@ -2,7 +2,7 @@ Summary:	Composite extension option manager
 Summary(pl):	Zarz±dca opcji dla rozszerzenia composite
 Name:		xcompmgr
 Version:	1.1.1
-Release:	1
+Release:	2
 Epoch:		1
 License:	MIT
 Group:		X11/Applications
