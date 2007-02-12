@@ -1,5 +1,5 @@
 Summary:	Composite extension option manager
-Summary(pl):	Zarz±dca opcji dla rozszerzenia composite
+Summary(pl.UTF-8):   ZarzÄ…dca opcji dla rozszerzenia composite
 Name:		xcompmgr
 Version:	1.1.1
 Release:	2
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Composite extension option manager.
 
-%description -l pl
-Zarz±dca opcji dla rozszerzenia composite.
+%description -l pl.UTF-8
+ZarzÄ…dca opcji dla rozszerzenia composite.
 
 %prep
 %setup -q
