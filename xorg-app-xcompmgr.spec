@@ -1,5 +1,5 @@
 Summary:	Composite extension option manager
-Summary(pl.UTF-8):   Zarządca opcji dla rozszerzenia composite
+Summary(pl.UTF-8):	Zarządca opcji dla rozszerzenia composite
 Name:		xcompmgr
 Version:	1.1.1
 Release:	2
