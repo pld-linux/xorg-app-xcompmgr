@@ -1,15 +1,15 @@
 Summary:	Example compositing manager for X servers supporting the Composite extension
 Summary(pl.UTF-8):	Przykładowy zarządca składania dla serwerów X z rozszerzeniem Composite
 Name:		xorg-app-xcompmgr
-Version:	1.1.5
+Version:	1.1.6
 Release:	1
 Epoch:		1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xcompmgr-%{version}.tar.bz2
-# Source0-md5:	bf8faa8c540bfdcd0252801d8f16d868
+# Source0-md5:	d45afaf2a153e8a5dd93a92955060c9a
 URL:		http://freedesktop.org/Software/xapps
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig
 BuildRequires:	xorg-lib-libXcomposite-devel
