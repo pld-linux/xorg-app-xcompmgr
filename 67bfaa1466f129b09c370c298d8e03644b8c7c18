@@ -1,0 +1,4 @@
+- Prefix changed to /opt/Xserver
+- Fixed summaries/descs
+- Fixed R/BR
+- Added %%doc files
